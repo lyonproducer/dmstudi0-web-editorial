@@ -32,24 +32,25 @@ export function ProcessTimeline() {
   return (
     <div className="space-y-48">
       {steps.map((step, i) => (
-        <Reveal key={i} direction="up" delay={i * 0.1}>
+        <Reveal key={i} direction="up" delay={i * 0.1} width="100%">
           <div className={cn(
-            "flex flex-col gap-12 lg:gap-24",
+            "flex flex-col gap-12 lg:gap-24 w-full",
             i % 2 === 0 ? "lg:flex-row" : "lg:flex-row-reverse"
           )}>
-            <div className="lg:w-1/2">
+            <div className="w-full lg:w-1/2 min-w-0">
               <div className="relative aspect-4/5 lg:aspect-square overflow-hidden group shadow-luxury-2xl">
                 <Image
                   src={step.image}
                   alt={step.title}
                   fill
+                  sizes="(max-width: 1024px) 100vw, 50vw"
                   className="object-cover transition-transform duration-1000 group-hover:scale-105 grayscale group-hover:grayscale-0"
                 />
                 <div className="absolute top-10 left-10 text-white font-serif text-8xl opacity-10 font-bold">{i + 1}</div>
               </div>
             </div>
             
-            <div className="lg:w-1/2 flex flex-col justify-center space-y-8">
+            <div className="w-full lg:w-1/2 min-w-0 flex flex-col justify-center space-y-8">
               <span className="text-cta text-[10px] uppercase tracking-widest font-bold block mb-4">Phase 0{i + 1}</span>
               <h3 className="text-4xl md:text-5xl font-serif mb-6">{step.title}</h3>
               <p className="text-secondary text-base leading-relaxed max-w-lg mb-12">{step.desc}</p>

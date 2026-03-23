@@ -2,7 +2,6 @@
 
 import React, { createContext, use } from "react";
 import Image from "next/image";
-import Link from "next/link";
 import { cn } from "@/app/shared/utils";
 import { Reveal } from "@/components/cinematic/Reveal";
 
@@ -35,11 +34,11 @@ function GalleryHeader({ children, className }: { children: React.ReactNode; cla
 function GalleryTitle({ label, title }: { label: string; title: string }) {
   return (
     <div className="max-w-2xl">
-      <Reveal direction="down" delay={0.1}>
+      <Reveal direction="down" delay={0.1} width="100%">
         <span className="subheadline mb-4 block">{label}</span>
       </Reveal>
-      <Reveal direction="left" delay={0.2}>
-        <h2 className="text-4xl md:text-7xl font-serif font-light leading-[1] text-pretty">
+      <Reveal direction="left" delay={0.2} width="100%">
+        <h2 className="text-4xl md:text-7xl font-serif font-light leading-none text-pretty">
           {title}
         </h2>
       </Reveal>
@@ -81,6 +80,7 @@ function GalleryItem({
             src={src}
             alt={title}
             fill
+            sizes="(max-width: 768px) 100vw, 50vw"
             className="object-cover transition-transform duration-1000 group-hover:scale-110"
           />
           <div className="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">

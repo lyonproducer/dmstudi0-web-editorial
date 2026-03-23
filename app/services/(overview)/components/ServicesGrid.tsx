@@ -25,6 +25,7 @@ export function ServicesGrid({ services }: { services: Service[] }) {
               src={service.image}
               alt={service.title}
               fill
+              sizes="(max-width: 768px) 100vw, 33vw"
               className="object-cover transition-transform duration-1000 group-hover:scale-110 grayscale group-hover:grayscale-0 opacity-80 group-hover:opacity-100"
             />
             

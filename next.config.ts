@@ -16,6 +16,10 @@ const nextConfig: NextConfig = {
         protocol: 'http',
         hostname: 'static1.squarespace.com',
       },
+      {
+        protocol: 'https',
+        hostname: 'images.unsplash.com',
+      },
     ],
   },
 };

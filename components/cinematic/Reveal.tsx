@@ -14,7 +14,7 @@ interface RevealProps {
 
 export const Reveal = ({ 
   children, 
-  width = "fit-content", 
+  width = "100%", 
   delay = 0,
   direction = "up",
   duration = 0.8
@@ -30,11 +30,12 @@ export const Reveal = ({
   };
 
   return (
-    <div ref={ref} style={{ position: "relative", width, overflow: "hidden" }}>
+    <div ref={ref} style={{ position: "relative", width, overflow: "hidden", display: "block" }}>
       <motion.div
         variants={directions[direction]}
         initial="hidden"
         animate={isInView ? "visible" : "hidden"}
+        style={{ width, display: "block" }}
         transition={{ 
           duration, 
           delay, 

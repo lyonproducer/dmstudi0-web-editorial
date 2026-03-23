@@ -59,7 +59,7 @@ export function PackageCard() {
       {packages.map((pkg, i) => (
         <Reveal key={i} direction="up" delay={i * 0.1} width="100%">
           <div className={cn(
-            "bg-background p-12 md:p-16 h-full flex flex-col items-center text-center",
+            "bg-background p-12 md:p-16 h-full flex flex-col items-stretch text-center",
             pkg.isPopular && "border-2 border-cta/30 relative z-10 scale-105"
           )}>
             {pkg.isPopular && (
@@ -71,7 +71,7 @@ export function PackageCard() {
             
             <div className="w-12 h-px bg-primary/20 mb-12" />
             
-            <ul className="space-y-6 text-xs uppercase tracking-widest font-medium text-stone-500 mb-16 h-full">
+            <ul className="space-y-6 text-xs uppercase tracking-widest font-medium text-stone-500 mb-16 h-full w-full">
               {pkg.features.map((feature, j) => (
                 <li key={j} className="flex flex-col items-center gap-2">
                   <div className="w-1 h-1 bg-cta/40 rounded-full" />
@@ -81,8 +81,10 @@ export function PackageCard() {
             </ul>
 
             <button className={cn(
-              "w-full py-5 text-[10px] uppercase tracking-[0.3em] font-bold transition-all duration-500 border",
-              pkg.isPopular ? "bg-primary text-white hover:bg-cta" : "border-primary/20 hover:bg-primary hover:text-white"
+              "w-full py-6 text-[11px] uppercase tracking-[0.4em] font-bold transition-all duration-500 border",
+              pkg.isPopular 
+                ? "bg-primary text-white border-primary hover:bg-cta hover:border-cta shadow-luxury-lg" 
+                : "border-primary/10 text-primary hover:bg-primary hover:text-white"
             )}>
               Inquire Now
             </button>

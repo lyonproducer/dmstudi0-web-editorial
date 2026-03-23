@@ -51,7 +51,7 @@ export default function PhotographyPage() {
             </Reveal>
           </div>
           <Reveal direction="right" delay={0.2}>
-            <Link href="/booking" className="bg-white text-primary px-12 py-6 uppercase font-medium tracking-[0.2em] transition-all duration-500 hover:bg-cta hover:text-white">
+            <Link href="/booking" className="inline-block bg-white text-primary px-16 py-7 uppercase font-bold tracking-[0.3em] text-[10px] transition-all duration-500 border border-white hover:bg-transparent hover:text-white hover:border-cta shadow-luxury-lg hover:shadow-cta/20 hover:-translate-y-1">
               Solicitar una Cotización
             </Link>
           </Reveal>
