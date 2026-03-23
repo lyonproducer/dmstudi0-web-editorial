@@ -15,11 +15,11 @@ export default function PostProductionPage() {
               <span className="subheadline mb-4 block">The Art of Finishing</span>
             </Reveal>
             <Reveal direction="left" delay={0.1}>
-              <h1 className="h1-editorial max-w-4xl">Post-Producción <br /> de Excelencia.</h1>
+              <h1 className="h1-editorial max-w-4xl font-serif">Excellence in <br /> Post-Production.</h1>
             </Reveal>
             <Reveal direction="up" delay={0.2}>
               <p className="mt-12 text-secondary text-xl max-w-2xl leading-relaxed">
-                Transformamos el material crudo en una obra maestra. Edición, Color Grading y Sound Design con estándares de la industria editorial.
+                Transforming raw footage into a masterpiece. Editing, Color Grading, and Sound Design to industry-leading editorial standards.
               </p>
             </Reveal>
           </div>
@@ -32,17 +32,17 @@ export default function PostProductionPage() {
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-24 text-center md:text-left">
           <div className="max-w-2xl">
             <Reveal direction="left">
-              <h3 className="text-5xl md:text-7xl font-serif mb-12 leading-tight">Elevamos cada frame de tu visión.</h3>
+              <h3 className="text-5xl md:text-7xl font-serif mb-12 leading-tight">Elevating every frame of your vision.</h3>
             </Reveal>
             <Reveal direction="up" delay={0.1}>
               <p className="text-xl text-stone-400 mb-16 max-w-lg leading-relaxed">
-                Nuestro proceso garantiza que tu contenido final tenga el impacto visual y la autoridad necesarios para destacar en mercados de lujo.
+                Our process ensures your final content has the visual impact and authority required to stand out in luxury markets.
               </p>
             </Reveal>
           </div>
           <Reveal direction="right" delay={0.2}>
             <Link href="/booking" className="inline-block bg-white text-primary px-16 py-7 uppercase font-bold tracking-[0.3em] text-[10px] transition-all duration-500 border border-white hover:bg-transparent hover:text-white hover:border-cta shadow-luxury-lg hover:shadow-cta/20 hover:-translate-y-1">
-              Cotiza tu Proyecto
+              Quote Your Project
             </Link>
           </Reveal>
         </div>
@@ -50,7 +50,7 @@ export default function PostProductionPage() {
 
       {/* Footer */}
       <footer className="py-24 px-6 border-t border-primary/5 text-center text-[10px] uppercase tracking-[0.3em] text-secondary">
-        <p>© 2024 DMStudio Editorial. <Link href="/services" className="hover:text-cta ml-4">Todos los Servicios</Link></p>
+        <p>© 2024 DMStudio Editorial. <Link href="/services" className="hover:text-cta ml-4">View All Services</Link></p>
       </footer>
     </main>
   );

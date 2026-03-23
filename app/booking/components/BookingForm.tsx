@@ -2,7 +2,6 @@
 
 import { useState } from "react";
 import { cn } from "@/app/shared/utils";
-import { Reveal } from "@/components/cinematic/Reveal";
 
 const projectTypes = [
   "Editorial Photography",
@@ -17,11 +16,11 @@ export function BookingForm() {
   const [selectedType, setSelectedType] = useState<string>("");
 
   return (
-    <div className="max-w-4xl mx-auto py-24 px-6 bg-stone-50 border border-primary/5 shadow-luxury-2xl">
+    <div className="max-w-4xl mx-auto py-24 px-12 md:px-24 bg-white border border-primary/5 shadow-luxury-2xl">
       <div className="mb-24 text-center">
         <span className="text-cta text-[10px] uppercase tracking-widest font-bold block mb-4">The Inquiry</span>
-        <h2 className="text-5xl font-serif mb-8 text-primary uppercase">Reserve your space.</h2>
-        <p className="text-secondary text-base max-w-lg mx-auto leading-relaxed">Cada proyecto es evaluado para asegurar que DMStudio Editorial sea el ajuste perfecto para tu visión narrativa.</p>
+        <h2 className="text-5xl font-serif mb-8 text-primary uppercase">Reserve your session.</h2>
+        <p className="text-secondary text-base max-w-lg mx-auto leading-relaxed">Each project is evaluated to ensure DMStudio Editorial is the perfect fit for your narrative vision.</p>
       </div>
 
       <form className="space-y-16">
@@ -73,7 +72,7 @@ export function BookingForm() {
         </div>
 
         <div className="flex justify-center pt-8">
-          <button className="bg-primary text-white px-16 py-6 uppercase font-medium tracking-[0.3em] transition-all duration-500 hover:bg-cta">
+          <button className="bg-primary text-white border border-primary px-16 py-6 uppercase font-bold tracking-[0.3em] text-[10px] transition-all duration-500 hover:bg-cta hover:border-cta shadow-luxury-lg hover:shadow-cta/20 hover:-translate-y-1">
             Submit Application
           </button>
         </div>

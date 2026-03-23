@@ -5,13 +5,13 @@ import { Reveal } from "@/components/cinematic/Reveal";
 
 const services = [
   {
-    title: "Fotografía Profesional",
+    title: "Professional Photography",
     id: "photography",
     desc: "Editorial, Lifestyle, and Professional Branding.",
     image: photos[2]
   },
   {
-    title: "Producción de Video",
+    title: "Video Production",
     id: "video",
     desc: "Social Content, Commercial, and Web Storytelling.",
     image: photos[3]
@@ -23,7 +23,7 @@ const services = [
     image: photos[4]
   },
   {
-    title: "Post-Producción",
+    title: "Post-Production",
     id: "post-production",
     desc: "Editing, Color Grading, and Sound Design.",
     image: photos[5]
@@ -75,7 +75,7 @@ export default function ServicesPage() {
 
       {/* Footer (Simplified) */}
       <footer className="py-24 px-6 border-t border-primary/5 text-center text-[10px] uppercase tracking-[0.3em] text-secondary">
-        <p>© 2024 DMStudio Editorial. <Link href="/" className="hover:text-cta ml-4">Home</Link></p>
+        <p>© 2024 DMStudio Editorial. <Link href="/" className="hover:text-cta ml-4">Back to Studio</Link></p>
       </footer>
     </main>
   );

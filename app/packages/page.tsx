@@ -17,7 +17,7 @@ export default function PackagesPage() {
             </Reveal>
             <Reveal direction="up" delay={0.2}>
               <p className="mt-12 text-secondary text-xl max-w-2xl leading-relaxed">
-                Nuestros paquetes mensuales están diseñados para marcas que buscan consistencia visual y narrativa. Resultados premium con la flexibilidad de una suscripción.
+                Our monthly packages are designed for brands seeking visual and narrative consistency. Premium results with the flexibility of a high-end subscription.
               </p>
             </Reveal>
           </div>
@@ -33,12 +33,12 @@ export default function PackagesPage() {
           </Reveal>
           <Reveal direction="up" delay={0.1}>
             <p className="text-xl text-stone-400 mb-16 max-w-2xl leading-relaxed mx-auto">
-              Cada paquete incluye dirección creativa completa, asegurando que tu inversión se traduzca en una autoridad visual indiscutible en el mercado.
+              Each package includes comprehensive creative direction, ensuring your investment translates into undeniable visual authority in the market.
             </p>
           </Reveal>
           <Reveal direction="up" delay={0.2}>
             <Link href="/booking" className="inline-block bg-white text-primary px-16 py-7 uppercase font-bold tracking-[0.3em] text-[10px] transition-all duration-500 border border-white hover:bg-transparent hover:text-white hover:border-cta shadow-luxury-lg hover:shadow-cta/20 hover:-translate-y-1">
-              Suscripción a Medida
+              Custom Subscription
             </Link>
           </Reveal>
         </div>
@@ -46,7 +46,7 @@ export default function PackagesPage() {
 
       {/* Footer */}
       <footer className="py-24 px-6 border-t border-primary/5 text-center text-[10px] uppercase tracking-[0.3em] text-secondary">
-        <p>© 2024 DMStudio Editorial. <Link href="/" className="hover:text-cta ml-4">Volver al Inicio</Link></p>
+        <p>© 2024 DMStudio Editorial. <Link href="/" className="hover:text-cta ml-4">Back to Studio</Link></p>
       </footer>
     </main>
   );

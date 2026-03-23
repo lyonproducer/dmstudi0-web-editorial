@@ -13,17 +13,17 @@ interface Step {
 const steps: Step[] = [
   {
     title: "Creative Inquiry",
-    desc: "Comenzamos con una consulta profunda para entender tu visión, objetivos y la narrativa que queremos capturar. Definimos el moodboard y la dirección artística.",
+    desc: "We begin with a deep consultation to understand your vision, objectives, and the narrative we aim to capture. We define the moodboard and artistic direction.",
     image: "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?q=80&w=2070&auto=format&fit=crop"
   },
   {
     title: "The Production",
-    desc: "Ejecución técnica de alto nivel. Ya sea en set, locación o estudio, cuidamos cada detalle de iluminación, composición y dirección para asegurar resultados premium.",
+    desc: "High-level technical execution. Whether on set, on location, or in-studio, we attend to every detail of lighting, composition, and direction to ensure premium results.",
     image: "https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?q=80&w=2071&auto=format&fit=crop"
   },
   {
     title: "The Editorial Polish",
-    desc: "Post-producción meticulosa. Refinamos cada imagen y frame para que cumpla con los estándares de la industria del lujo, entregando resultados listos para impactar.",
+    desc: "Meticulous post-production. We refine every image and frame to meet luxury industry standards, delivering results ready to make an impact.",
     image: "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=2070&auto=format&fit=crop"
   }
 ];

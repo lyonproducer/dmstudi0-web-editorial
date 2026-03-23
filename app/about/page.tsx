@@ -17,7 +17,7 @@ export default function AboutPage() {
             </Reveal>
             <Reveal direction="up" delay={0.2}>
               <p className="mt-12 text-secondary text-xl max-w-2xl leading-relaxed">
-                DMStudio Editorial no es solo una casa de producción; es un espacio de pensamiento creativo para aquellos que buscan verse premium y atraer clientes de alto nivel.
+                DMStudio Editorial is more than a production house; it&apos;s a space for creative thinking for those seeking a premium presence and high-end clients.
               </p>
             </Reveal>
           </div>
@@ -33,12 +33,12 @@ export default function AboutPage() {
           </Reveal>
           <Reveal direction="up" delay={0.1}>
             <p className="text-xl text-stone-400 mb-16 max-w-2xl leading-relaxed mx-auto">
-              Cada proyecto es una oportunidad para redefinir el estándar visual de tu marca. Trabajamos con agencias, celebridades y marcas que buscan la excelencia.
+              Every project is an opportunity to redefine your brand&apos;s visual standard. We work with agencies, celebrities, and brands pursuing excellence.
             </p>
           </Reveal>
           <Reveal direction="up" delay={0.2}>
             <Link href="/booking" className="inline-block bg-white text-primary px-16 py-7 uppercase font-bold tracking-[0.3em] text-[10px] transition-all duration-500 border border-white hover:bg-transparent hover:text-white hover:border-cta shadow-luxury-lg hover:shadow-cta/20 hover:-translate-y-1">
-              Agendar una Sesión
+              Book a Session
             </Link>
           </Reveal>
         </div>
@@ -46,7 +46,7 @@ export default function AboutPage() {
 
       {/* Footer */}
       <footer className="py-24 px-6 border-t border-primary/5 text-center text-[10px] uppercase tracking-[0.3em] text-secondary">
-        <p>© 2024 DMStudio Editorial. <Link href="/" className="hover:text-cta ml-4">Volver al Inicio</Link></p>
+        <p>© 2024 DMStudio Editorial. <Link href="/" className="hover:text-cta ml-4">Back to Studio</Link></p>
       </footer>
     </main>
   );
