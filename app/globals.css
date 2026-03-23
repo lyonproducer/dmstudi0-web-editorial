@@ -1,26 +1,108 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Core Colors - Luxury Editorial Palette */
+  --primary: #0C0A09;
+  --secondary: #44403C;
+  --cta: #A16207;
+  --background: #FAFAF9;
+  --foreground: #0C0A09;
+  
+  /* Spacing Scale (Rhythm) */
+  --space-xs: 4px;
+  --space-sm: 8px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 32px;
+  --space-2xl: 64px;
+  --space-3xl: 96px;
+
+  /* Shadows (Soft Luxury) */
+  --shadow-luxury-sm: 0 1px 2px rgba(0,0,0,0.03);
+  --shadow-luxury-md: 0 4px 6px -1px rgba(0,0,0,0.05), 0 2px 4px -1px rgba(0,0,0,0.03);
+  --shadow-luxury-lg: 0 10px 15px -3px rgba(0,0,0,0.05), 0 4px 6px -2px rgba(0,0,0,0.03);
+  --shadow-luxury-xl: 0 25px 50px -12px rgba(0,0,0,0.15);
 }
 
-@theme inline {
+@theme {
+  --color-primary: var(--primary);
+  --color-secondary: var(--secondary);
+  --color-cta: var(--cta);
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+  
+  --spacing-xs: var(--space-xs);
+  --spacing-sm: var(--space-sm);
+  --spacing-md: var(--space-md);
+  --spacing-lg: var(--space-lg);
+  --spacing-xl: var(--space-xl);
+  --spacing-xxl: var(--space-2xl);
+  --spacing-xxxl: var(--space-3xl);
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --font-serif: var(--font-playfair);
+  --font-sans: var(--font-inter);
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-inter), sans-serif;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Typography Utilities */
+.h1-editorial {
+  font-family: var(--font-playfair), serif;
+  font-size: clamp(3.5rem, 12vw, 9rem);
+  line-height: 0.9;
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  color: var(--primary);
+}
+
+.subheadline {
+  font-family: var(--font-inter), sans-serif;
+  font-size: 0.8rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--secondary);
+}
+
+/* Components Styling */
+.btn-primary {
+  @apply bg-primary text-background px-8 py-4 uppercase font-medium tracking-widest cursor-pointer transition-all duration-500 ease-in-out;
+  border-radius: 0;
+}
+
+.btn-primary:hover {
+  @apply bg-cta scale-105;
+}
+
+.btn-secondary {
+  @apply bg-transparent text-primary border border-primary px-8 py-4 uppercase font-medium tracking-widest cursor-pointer transition-all duration-300;
+  border-radius: 0;
+}
+
+.btn-secondary:hover {
+  @apply bg-primary text-background;
+}
+
+/* Cinematic Transitions */
+.reveal-up {
+  opacity: 0;
+  transform: translateY(2rem);
+  animation: reveal 0.8s cubic-bezier(0.23, 1, 0.32, 1) forwards;
+}
+
+@keyframes reveal {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Custom Cursor Placeholder (Client-side implementation) */
+.custom-cursor {
+  mix-blend-mode: difference;
 }
