@@ -7,6 +7,7 @@ import { useRef } from "react";
 interface RevealProps {
   children: React.ReactNode;
   width?: "fit-content" | "100%";
+  height?: "fit-content" | "100%";
   delay?: number;
   direction?: "up" | "down" | "left" | "right";
   duration?: number;
@@ -15,6 +16,7 @@ interface RevealProps {
 export const Reveal = ({ 
   children, 
   width = "100%", 
+  height = "fit-content",
   delay = 0,
   direction = "up",
   duration = 0.8
@@ -30,12 +32,12 @@ export const Reveal = ({
   };
 
   return (
-    <div ref={ref} style={{ position: "relative", width, overflow: "hidden", display: "block" }}>
+    <div ref={ref} style={{ position: "relative", width, height, overflow: "hidden", display: "block" }}>
       <motion.div
         variants={directions[direction]}
         initial="hidden"
         animate={isInView ? "visible" : "hidden"}
-        style={{ width, display: "block" }}
+        style={{ width, height, display: "block" }}
         transition={{ 
           duration, 
           delay, 

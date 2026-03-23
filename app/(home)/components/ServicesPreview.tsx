@@ -68,8 +68,10 @@ function ServicesSummary({ label, title, desc, ctaText, ctaHref }: { label: stri
 }
 
 function ServicesGrid({ children, className }: { children: React.ReactNode; className?: string }) {
+  const { theme } = use(ServicesContext)!;
+  const lineColor = theme === "dark" ? "bg-white/10" : "bg-primary/10";
   return (
-    <div className={cn("lg:col-span-2 grid grid-cols-1 md:grid-cols-2 gap-px bg-white/5", className)}>
+    <div className={cn("lg:col-span-1 grid grid-cols-1 md:grid-cols-2 gap-px", lineColor, className)}>
       {children}
     </div>
   );
@@ -77,12 +79,12 @@ function ServicesGrid({ children, className }: { children: React.ReactNode; clas
 
 function ServicesItem({ title, desc, href, index }: { title: string; desc: string; href: string; index: number }) {
   const { theme } = use(ServicesContext)!;
-  const borderColor = theme === "dark" ? "border-white/5" : "border-primary/5";
-  const hoverBg = theme === "dark" ? "hover:bg-white/5" : "hover:bg-stone-50";
+  const itemBg = theme === "dark" ? "bg-primary" : "bg-background";
+  const hoverBg = theme === "dark" ? "hover:bg-white/[0.03]" : "hover:bg-stone-50";
 
   return (
-    <Reveal direction="up" delay={index * 0.1} width="100%">
-      <Link href={href} className={cn("group p-12 lg:p-16 border transition-all h-full flex flex-col justify-between", borderColor, hoverBg)}>
+    <Reveal direction="up" delay={index * 0.1} width="100%" height="100%">
+      <Link href={href} className={cn("group p-12 lg:p-16 transition-all h-full flex flex-col justify-between", itemBg, hoverBg)}>
         <div>
           <span className="text-cta font-mono text-xs mb-8 block opacity-40 group-hover:opacity-100 transition-opacity">0{index + 1}</span>
           <h4 className="text-4xl font-serif mb-6 group-hover:text-cta transition-colors">{title}</h4>
