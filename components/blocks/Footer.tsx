@@ -33,7 +33,7 @@ export function Footer() {
         </div>
       </div>
       <div className="max-w-7xl mx-auto mt-32 pt-12 border-t border-primary/5 flex flex-col md:flex-row justify-between items-center gap-6 text-[10px] uppercase tracking-[0.3em] font-medium text-secondary">
-        <p>© 2024 DMStudio Editorial. All rights reserved.</p>
+        <p>© 2026 DMStudio Editorial. All rights reserved.</p>
         <div className="flex gap-12">
           <Link href="/privacy" className="hover:text-primary transition-colors">Privacy</Link>
           <Link href="/terms" className="hover:text-primary transition-colors">Terms</Link>

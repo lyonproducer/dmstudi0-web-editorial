@@ -75,7 +75,7 @@ export default function ServicesPage() {
 
       {/* Footer (Simplified) */}
       <footer className="py-24 px-6 border-t border-primary/5 text-center text-[10px] uppercase tracking-[0.3em] text-secondary">
-        <p>© 2024 DMStudio Editorial. <Link href="/" className="hover:text-cta ml-4">Back to Studio</Link></p>
+        <p>© 2026 DMStudio Editorial. <Link href="/" className="hover:text-cta ml-4">Back to Studio</Link></p>
       </footer>
     </main>
   );

@@ -10,10 +10,10 @@ export default function BookingPage() {
       {/* Cinematic Hero Header */}
       <section className="relative h-[60vh] flex items-center justify-center pt-32">
         <div className="absolute inset-0 z-0">
-          <Image 
-            src={photos[18]} 
-            alt="DMStudio Editorial Workspace" 
-            fill 
+          <Image
+            src={photos[18]}
+            alt="DMStudio Editorial Workspace"
+            fill
             priority
             sizes="100vw"
             className="object-cover opacity-80"
@@ -62,7 +62,7 @@ export default function BookingPage() {
 
       {/* Footer */}
       <footer className="py-24 px-6 border-t border-primary/5 text-center text-[10px] uppercase tracking-[0.3em] text-secondary">
-        <p>© 2024 DMStudio Editorial. <Link href="/" className="hover:text-cta ml-4">Back to Start</Link></p>
+        <p>© 2026 DMStudio Editorial. <Link href="/" className="hover:text-cta ml-4">Back to Start</Link></p>
       </footer>
     </main>
   );
