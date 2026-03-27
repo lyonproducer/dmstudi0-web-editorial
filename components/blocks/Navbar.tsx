@@ -7,7 +7,7 @@ import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { cn } from "@/app/shared/utils";
 import { Menu, X } from "lucide-react";
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence, motion, useScroll, useMotionValueEvent } from "framer-motion";
 
 const desktopLinks = [
   { name: "Services", href: "/services" },
@@ -19,6 +19,17 @@ const desktopLinks = [
 export function Navbar() {
   const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
+  const [hidden, setHidden] = useState(false);
+  const { scrollY } = useScroll();
+
+  useMotionValueEvent(scrollY, "change", (latest) => {
+    const previous = scrollY.getPrevious() ?? 0;
+    if (latest > previous && latest > 150) {
+      setHidden(true);
+    } else {
+      setHidden(false);
+    }
+  });
 
   useEffect(() => {
     if (isOpen) {
@@ -31,7 +42,14 @@ export function Navbar() {
 
   return (
     <>
-      <nav className="fixed top-0 w-full z-40 bg-background/80 backdrop-blur-md border-b border-primary/5 px-6 md:px-12 py-6 flex justify-between items-center">
+      <motion.nav
+        variants={{
+          visible: { y: 0, transition: { duration: 0.35, ease: "easeInOut" } },
+          hidden: { y: "-100%", transition: { duration: 0.35, ease: "easeInOut" } },
+        }}
+        animate={hidden ? "hidden" : "visible"}
+        className="fixed top-0 w-full z-40 bg-background/50 backdrop-blur-xl border-b border-primary/5 px-6 md:px-12 py-6 flex justify-between items-center transition-colors duration-500"
+      >
         <Link href="/" className="hover:opacity-80 transition-opacity">
           <Image src="/logos/dm.webp" alt="DMStudio Logo" width={150} height={40} className="object-contain" priority />
         </Link>
@@ -76,7 +94,7 @@ export function Navbar() {
         >
           <Menu size={28} strokeWidth={1.5} />
         </button>
-      </nav>
+      </motion.nav>
 
       {/* Fullscreen Mobile Menu Overlay */}
       <AnimatePresence>

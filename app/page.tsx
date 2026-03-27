@@ -1,9 +1,12 @@
 import { HeroRoot, HeroVisual, HeroContent, HeroActions, HeroScrollLink } from "./(home)/components/Hero";
 import { AuthorityStrip } from "./(home)/components/AuthorityStrip";
+import { AuthorityBio } from "./(home)/components/AuthorityBio";
 import { Exhibition } from "./(home)/components/Exhibition";
 import { Capabilities } from "./(home)/components/Capabilities";
 import { Footer } from "@/components/blocks/Footer";
 import { Reveal } from "@/components/cinematic/Reveal";
+import ImmersiveScrollGallery from "@/components/ui/immersive-scroll-gallery";
+import { photos } from "@/app/shared/constants";
 import Link from "next/link";
 
 export default function Home() {
@@ -36,10 +39,23 @@ export default function Home() {
         <HeroScrollLink />
       </HeroRoot>
 
-      {/* 2. Authority Endorsements */}
+      {/* 3. Authority Endorsements */}
       <AuthorityStrip />
 
-      {/* 3. Featured Exhibition (Masonry Gallery) */}
+
+      {/* 2. Immersive Scroll Gallery */}
+      <ImmersiveScrollGallery
+        images={[
+          photos[4], photos[2], photos[3], photos[1],
+          photos[5], photos[6], photos[7],
+        ].map((src) => ({ src, scale: null }))}
+        headline="Every frame tells a story that commands attention."
+      />
+
+      {/* 3. The Eye - Visual Bio */}
+      <AuthorityBio />
+
+      {/* 4. Featured Exhibition (Masonry Gallery) */}
       <Exhibition />
 
       {/* 4. Services Preview (High Contrast Dark Section) */}

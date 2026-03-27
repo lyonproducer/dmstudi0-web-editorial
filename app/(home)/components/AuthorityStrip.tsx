@@ -1,5 +1,6 @@
 import React from "react";
 import { cn } from "@/app/shared/utils";
+import { Marquee } from "@/components/cinematic/Marquee";
 
 const agencies = [
   "VOGUE",
@@ -7,20 +8,24 @@ const agencies = [
   "GQ",
   "ELLE",
   "Architectural Digest",
+  "VANITY FAIR",
+  "V MAG",
 ];
 
 export function AuthorityStrip({ className }: { className?: string }) {
   return (
-    <section className={cn("bg-primary py-16 px-6 border-y border-white/5 overflow-hidden", className)}>
-      <div className="max-w-7xl mx-auto flex flex-wrap justify-center items-center gap-12 sm:gap-16 lg:gap-24 opacity-30 grayscale transition-all duration-700 hover:grayscale-0 hover:opacity-100">
-        {agencies.map((name) => (
-          <span
-            key={name}
-            className="text-white font-serif italic text-2xl md:text-3xl tracking-tighter whitespace-nowrap select-none"
-          >
-            {name}
-          </span>
-        ))}
+    <section className={cn("bg-primary py-16 border-y border-white/5 overflow-hidden", className)}>
+      <div className="max-w-[100vw] mx-auto opacity-40 grayscale transition-all duration-700 hover:grayscale-0 hover:opacity-100">
+        <Marquee duration={25} gap="6rem" pauseOnHover>
+          {agencies.map((name, idx) => (
+            <span
+              key={`${name}-${idx}`}
+              className="text-white font-editorial italic text-3xl md:text-4xl tracking-tighter whitespace-nowrap select-none"
+            >
+              {name}
+            </span>
+          ))}
+        </Marquee>
       </div>
     </section>
   );

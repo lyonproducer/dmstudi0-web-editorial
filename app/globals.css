@@ -112,3 +112,20 @@ body {
 .custom-cursor {
   mix-blend-mode: difference;
 }
+
+/* Infinite Marquee Animation */
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(calc(-100% - var(--gap))); }
+}
+
+.animate-marquee {
+  animation: marquee var(--duration) linear infinite;
+}
+
+/* Holographic Shimmer (Credential Card) */
+@keyframes shimmer {
+  0%   { background-position: 200% 200%; }
+  50%  { background-position: 50% 50%; }
+  100% { background-position: 200% 200%; }
+}
