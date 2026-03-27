@@ -68,9 +68,9 @@ export function PackageCard() {
             <span className="text-[10px] uppercase tracking-widest font-bold text-stone-400 mb-6 block">{pkg.name}</span>
             <div className="text-5xl md:text-6xl font-serif mb-8 text-primary">{pkg.price}</div>
             <p className="text-secondary text-sm leading-relaxed mb-12 max-w-xs">{pkg.desc}</p>
-            
-            <div className="w-12 h-px bg-primary/20 mb-12" />
-            
+
+            <div className="w-[80%] mx-auto h-px bg-primary/20 mb-12" />
+
             <ul className="space-y-6 text-xs uppercase tracking-widest font-medium text-stone-500 mb-16 h-full w-full">
               {pkg.features.map((feature, j) => (
                 <li key={j} className="flex flex-col items-center gap-2">
@@ -82,8 +82,8 @@ export function PackageCard() {
 
             <button className={cn(
               "w-full py-6 text-[11px] uppercase tracking-[0.4em] font-bold transition-all duration-500 border",
-              pkg.isPopular 
-                ? "bg-primary text-white border-primary hover:bg-cta hover:border-cta shadow-luxury-lg" 
+              pkg.isPopular
+                ? "bg-primary text-white border-primary hover:bg-cta hover:border-cta shadow-luxury-lg"
                 : "border-primary/10 text-primary hover:bg-primary hover:text-white"
             )}>
               Inquire Now
