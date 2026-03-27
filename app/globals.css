@@ -63,6 +63,10 @@ body {
   color: var(--primary);
 }
 
+.font-editorial {
+  font-family: var(--font-playfair), serif;
+}
+
 .subheadline {
   font-family: var(--font-inter), sans-serif;
   font-size: 0.8rem;
