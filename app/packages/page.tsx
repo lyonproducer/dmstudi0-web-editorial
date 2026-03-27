@@ -1,7 +1,7 @@
-import Link from "next/link";
 import { PackageCard } from "./components/PackageCard";
 import { Reveal } from "@/components/cinematic/Reveal";
 import { Footer } from "@/components/blocks/Footer";
+import { CallToActionSection } from "@/components/blocks/CTA";
 
 export default function PackagesPage() {
   return (
@@ -27,23 +27,18 @@ export default function PackagesPage() {
         </div>
       </div>
 
-      <section className="bg-primary text-white py-48 px-6 text-center">
-        <div className="max-w-4xl mx-auto flex flex-col items-center">
-          <Reveal direction="up">
-            <h2 className="text-5xl md:text-7xl font-serif mb-12 leading-tight">Elevate your brand <br /> with technical perfection.</h2>
-          </Reveal>
-          <Reveal direction="up" delay={0.1}>
-            <p className="text-xl text-stone-400 mb-16 max-w-2xl leading-relaxed mx-auto">
-              Each package includes comprehensive creative direction, ensuring your investment translates into undeniable visual authority in the market.
-            </p>
-          </Reveal>
-          <Reveal direction="up" delay={0.2}>
-            <Link href="/booking" className="inline-block bg-white text-primary px-16 py-7 uppercase font-bold tracking-[0.3em] text-[10px] transition-all duration-500 border border-white hover:bg-transparent hover:text-white hover:border-cta shadow-luxury-lg hover:shadow-cta/20 hover:-translate-y-1">
-              Custom Subscription
-            </Link>
-          </Reveal>
-        </div>
-      </section>
+      <CallToActionSection
+        title={
+          <>
+            Elevate your brand <br /> with technical perfection.
+          </>
+        }
+        description="Each package includes comprehensive creative direction, ensuring your investment translates into undeniable visual authority in the market."
+        primaryButtonText="Custom Subscription"
+        primaryButtonHref="/booking"
+        secondaryButtonText="View Services"
+        secondaryButtonHref="/services"
+      />
 
       <Footer />
     </main>

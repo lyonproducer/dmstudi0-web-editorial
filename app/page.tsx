@@ -3,6 +3,7 @@ import { AuthorityStrip } from "./(home)/components/AuthorityStrip";
 import { AuthorityBio } from "./(home)/components/AuthorityBio";
 import { Exhibition } from "./(home)/components/Exhibition";
 import { Capabilities } from "./(home)/components/Capabilities";
+import { CallToActionSection } from "@/components/blocks/CTA";
 import { Footer } from "@/components/blocks/Footer";
 import { Reveal } from "@/components/cinematic/Reveal";
 import ImmersiveScrollGallery from "@/components/ui/immersive-scroll-gallery";
@@ -61,7 +62,13 @@ export default function Home() {
       {/* 4. Services Preview (High Contrast Dark Section) */}
       <Capabilities />
 
-      {/* 5. Minimalist Footer */}
+      {/* 5. Final Call to Action */}
+      <CallToActionSection
+        title="Transform Your Vision into a Living Narrative."
+        description="Experience the standard of luxury production. Limited bookings available each month."
+      />
+
+      {/* 6. Minimalist Footer */}
       <Footer />
     </main>
   );

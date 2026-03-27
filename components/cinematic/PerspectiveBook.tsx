@@ -1,7 +1,8 @@
 "use client";
 
-import React, { useRef, MouseEvent } from "react";
+import React, { useRef, MouseEvent, useState, useEffect } from "react";
 import { cn } from "@/app/shared/utils";
+import { motion, AnimatePresence } from "framer-motion";
 
 interface PerspectiveBookProps {
   children?: React.ReactNode;
@@ -16,16 +17,29 @@ interface PerspectiveBookProps {
 }
 
 const sizeMap = {
-  sm:      { w: "w-52",  h: "h-72",  depth: "6px"  },
-  default: { w: "w-64",  h: "h-96",  depth: "8px"  },
-  lg:      { w: "w-80",  h: "h-[28rem]", depth: "10px" },
+  sm: { w: "w-52", h: "h-72", depth: "6px" },
+  default: { w: "w-64", h: "h-96", depth: "8px" },
+  lg: { w: "w-80", h: "h-[28rem]", depth: "10px" },
 };
+
+const BEHIND_SCENES_PHOTOS = [
+  "/images/photos-array-behind-the-scenes/234ce3ccfba8ac414c67ee661944a758-large.jpg",
+  "/images/photos-array-behind-the-scenes/3d25fdef2a767f7f3528dcd0e351b792-large.jpg",
+  "/images/photos-array-behind-the-scenes/6dff244ea9ac3e448544313f62765cf6-large.jpg",
+  "/images/photos-array-behind-the-scenes/c68710c2037c7cb948a34d115325269c-cover.jpg",
+  "/images/photos-array-behind-the-scenes/c88962ceb2184b658eada01022d7a28b-large.jpg",
+  "/images/photos-array-behind-the-scenes/d82033a2eedf460ba54fe084bb25d5fd-large.jpg",
+  "/images/photos-array-behind-the-scenes/d88648b019439e2b434a92d800170f60-large.jpg",
+  "/images/photos-array-behind-the-scenes/eabd76d85032bfe91bdf3bb15fe6bffc-large.jpg",
+  "/images/photos-array-behind-the-scenes/f529da6bf4479df41364a9714c3361ca-large.jpg",
+  "/images/photos-array-behind-the-scenes/fec836e3170382045c87182decc69749-large.jpg",
+];
 
 export function PerspectiveBook({
   children,
   className,
   photo,
-  name = "Daniel Marcano",
+  name = "Daniel Martinez",
   role = "Director & Visual Artist",
   studio = "DMStudio Editorial",
   badgeId = "DMS-001",
@@ -34,13 +48,22 @@ export function PerspectiveBook({
 }: PerspectiveBookProps) {
   const cardRef = useRef<HTMLDivElement>(null);
   const { w, h, depth } = sizeMap[size];
+  const [photoIndex, setPhotoIndex] = useState(0);
+
+  useEffect(() => {
+    if (photo) return; // don't cycle if a static photo was passed
+    const timer = setInterval(() => {
+      setPhotoIndex((prev) => (prev + 1) % BEHIND_SCENES_PHOTOS.length);
+    }, 3000);
+    return () => clearInterval(timer);
+  }, [photo]);
 
   /* Interactive tilt calculation */
   const handleMouseMove = (e: MouseEvent<HTMLDivElement>) => {
     if (!cardRef.current) return;
     const rect = cardRef.current.getBoundingClientRect();
-    const xPct = (e.clientX - rect.left) / rect.width  - 0.5;
-    const yPct = (e.clientY - rect.top)  / rect.height - 0.5;
+    const xPct = (e.clientX - rect.left) / rect.width - 0.5;
+    const yPct = (e.clientY - rect.top) / rect.height - 0.5;
     cardRef.current.style.transform = `
       perspective(1000px)
       rotateY(${xPct * 40}deg)
@@ -58,6 +81,8 @@ export function PerspectiveBook({
       scale3d(1, 1, 1)
     `;
   };
+
+  const currentPhoto = photo || BEHIND_SCENES_PHOTOS[photoIndex];
 
   return (
     <div
@@ -121,25 +146,25 @@ export function PerspectiveBook({
           )}
 
           {/* Headshot Photo Section */}
-          <div className="relative w-full" style={{ height: "58%" }}>
-            {photo ? (
-              // eslint-disable-next-line @next/next/no-img-element
-              <img
-                src={photo}
+          <div className="relative w-full overflow-hidden" style={{ height: "68%" }}>
+            <AnimatePresence mode="wait">
+              <motion.img
+                key={currentPhoto}
+                initial={{ opacity: 0, scale: 1.1 }}
+                animate={{ opacity: 1, scale: 1 }}
+                exit={{ opacity: 0, scale: 0.95 }}
+                transition={{ duration: 0.8, ease: "easeInOut" }}
+                src={currentPhoto}
                 alt={name}
-                className="w-full h-full object-cover object-top grayscale hover:grayscale-0 transition-all duration-700"
+                className="absolute inset-0 w-full h-full object-cover object-top grayscale hover:grayscale-0 transition-grayscale duration-700"
               />
-            ) : (
-              <div className="w-full h-full bg-stone-900 flex items-center justify-center">
-                <span className="text-4xl font-editorial font-bold text-stone-700">{name.charAt(0)}</span>
-              </div>
-            )}
+            </AnimatePresence>
             {/* Soft fade to body */}
-            <div className="absolute inset-0 bg-linear-to-b from-transparent via-transparent to-[#0c0a09]" />
+            <div className="absolute inset-0 bg-linear-to-b from-transparent via-transparent to-[#0c0a09] z-10" />
           </div>
 
           {/* Content Details */}
-          <div className="relative z-10 px-6 pb-6 flex flex-col justify-end h-[42%]">
+          <div className="relative z-10 px-6 pb-6 flex flex-col justify-end h-[32%]">
             <h3 className="font-editorial text-white text-3xl font-bold leading-tight tracking-tight">
               {name}
             </h3>

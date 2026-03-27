@@ -11,6 +11,7 @@ interface RevealProps {
   delay?: number;
   direction?: "up" | "down" | "left" | "right";
   duration?: number;
+  className?: string;
 }
 
 export const Reveal = ({ 
@@ -19,7 +20,8 @@ export const Reveal = ({
   height = "fit-content",
   delay = 0,
   direction = "up",
-  duration = 0.8
+  duration = 0.8,
+  className
 }: RevealProps) => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
@@ -33,7 +35,17 @@ export const Reveal = ({
   };
 
   return (
-    <div ref={ref} style={{ position: "relative", width, height, overflow: hasAnimated ? "visible" : "hidden", display: "block" }}>
+    <div 
+      ref={ref} 
+      className={className}
+      style={{ 
+        position: "relative", 
+        width, 
+        height, 
+        overflow: hasAnimated ? "visible" : "hidden", 
+        display: "block" 
+      }}
+    >
       <motion.div
         variants={directions[direction]}
         initial="hidden"

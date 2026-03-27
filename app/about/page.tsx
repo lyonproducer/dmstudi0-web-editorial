@@ -1,7 +1,7 @@
-import Link from "next/link";
 import { ProcessTimeline } from "./components/ProcessTimeline";
 import { Reveal } from "@/components/cinematic/Reveal";
 import { Footer } from "@/components/blocks/Footer";
+import { CallToActionSection } from "@/components/blocks/CTA";
 
 export default function AboutPage() {
   return (
@@ -27,23 +27,18 @@ export default function AboutPage() {
         </div>
       </div>
 
-      <section className="bg-primary text-white py-48 px-6 text-center">
-        <div className="max-w-4xl mx-auto flex flex-col items-center">
-          <Reveal direction="up">
-            <h2 className="text-5xl md:text-7xl font-serif mb-12 leading-tight">Ready to start your <br /> editorial journey?</h2>
-          </Reveal>
-          <Reveal direction="up" delay={0.1}>
-            <p className="text-xl text-stone-400 mb-16 max-w-2xl leading-relaxed mx-auto">
-              Every project is an opportunity to redefine your brand&apos;s visual standard. We work with agencies, celebrities, and brands pursuing excellence.
-            </p>
-          </Reveal>
-          <Reveal direction="up" delay={0.2}>
-            <Link href="/booking" className="inline-block bg-white text-primary px-16 py-7 uppercase font-bold tracking-[0.3em] text-[10px] transition-all duration-500 border border-white hover:bg-transparent hover:text-white hover:border-cta shadow-luxury-lg hover:shadow-cta/20 hover:-translate-y-1">
-              Book a Session
-            </Link>
-          </Reveal>
-        </div>
-      </section>
+      <CallToActionSection
+        title={
+          <>
+            Ready to start your <br /> editorial journey?
+          </>
+        }
+        description="Every project is an opportunity to redefine your brand's visual standard. We work with agencies, celebrities, and brands pursuing excellence."
+        primaryButtonText="Book a Session"
+        primaryButtonHref="/booking"
+        secondaryButtonText="View Packages"
+        secondaryButtonHref="/packages"
+      />
 
       <Footer />
     </main>
