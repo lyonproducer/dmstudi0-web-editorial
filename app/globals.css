@@ -1,13 +1,13 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
 :root {
   /* Core Colors - Luxury Editorial Palette */
-  --primary: #0C0A09;
-  --secondary: #44403C;
-  --cta: #A16207;
-  --background: #FAFAF9;
-  --foreground: #0C0A09;
-  
+  --primary: #0c0a09;
+  --secondary: #44403c;
+  --cta: #a16207;
+  --background: #fafaf9;
+  --foreground: #0c0a09;
+
   /* Spacing Scale (Rhythm) */
   --space-xs: 4px;
   --space-sm: 8px;
@@ -18,10 +18,12 @@
   --space-3xl: 96px;
 
   /* Shadows (Soft Luxury) */
-  --shadow-luxury-sm: 0 1px 2px rgba(0,0,0,0.03);
-  --shadow-luxury-md: 0 4px 6px -1px rgba(0,0,0,0.05), 0 2px 4px -1px rgba(0,0,0,0.03);
-  --shadow-luxury-lg: 0 10px 15px -3px rgba(0,0,0,0.05), 0 4px 6px -2px rgba(0,0,0,0.03);
-  --shadow-luxury-xl: 0 25px 50px -12px rgba(0,0,0,0.15);
+  --shadow-luxury-sm: 0 1px 2px rgba(0, 0, 0, 0.03);
+  --shadow-luxury-md: 0 4px 6px -1px rgba(0, 0, 0, 0.05),
+    0 2px 4px -1px rgba(0, 0, 0, 0.03);
+  --shadow-luxury-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.05),
+    0 4px 6px -2px rgba(0, 0, 0, 0.03);
+  --shadow-luxury-xl: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
 }
 
 @theme {
@@ -30,7 +32,7 @@
   --color-cta: var(--cta);
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  
+
   --spacing-editorial-xs: var(--space-xs);
   --spacing-editorial-sm: var(--space-sm);
   --spacing-editorial-md: var(--space-md);
@@ -54,7 +56,7 @@ body {
 /* Typography Utilities */
 .h1-editorial {
   font-family: var(--font-playfair), serif;
-  font-size: clamp(3.5rem, 12vw, 9rem);
+  font-size: clamp(3.5rem, 8vw, 7rem);
   line-height: 0.9;
   font-weight: 600;
   letter-spacing: -0.03em;

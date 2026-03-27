@@ -2,6 +2,7 @@ import Link from "next/link";
 import { photos } from "../../shared/constants";
 import { PodcastEnvironment } from "./components/PodcastEnvironment";
 import { Reveal } from "@/components/cinematic/Reveal";
+import { Footer } from "@/components/blocks/Footer";
 
 export default function PodcastPage() {
   const podcastPhotos = photos.slice(40, 43);
@@ -46,10 +47,7 @@ export default function PodcastPage() {
         </div>
       </section>
 
-      {/* Footer (Simplified) */}
-      <footer className="py-24 px-6 border-t border-primary/5 text-center text-[10px] uppercase tracking-[0.3em] text-secondary">
-        <p>© 2026 DMStudio Editorial. <Link href="/services" className="hover:text-cta ml-4">View All Services</Link></p>
-      </footer>
+      <Footer />
     </main>
   );
 }

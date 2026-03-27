@@ -25,7 +25,7 @@ export function Footer() {
         <div>
           <h4 className="text-xs uppercase tracking-[0.2em] font-bold mb-10 text-primary/40">Connect</h4>
           <ul className="space-y-6 text-sm font-medium">
-            <li><a href="#" className="hover:text-cta transition-colors">Instagram</a></li>
+            <li><a href="https://www.instagram.com/foodstudi0" target="_blank" rel="noopener noreferrer" className="hover:text-cta transition-colors">Instagram</a></li>
             <li><a href="#" className="hover:text-cta transition-colors">TikTok</a></li>
             <li><a href="#" className="hover:text-cta transition-colors">YouTube</a></li>
             <li><a href="#" className="hover:text-cta transition-colors">LinkedIn</a></li>

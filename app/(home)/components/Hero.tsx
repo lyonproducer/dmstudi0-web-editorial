@@ -57,6 +57,9 @@ export function HeroVisual({ src, alt, interval = 5000, randomize = false }: { s
     return <div className="absolute inset-0 z-0 bg-black" />;
   }
 
+  const currentSrc = slides[index];
+  const isVideo = currentSrc?.toLowerCase().endsWith(".mp4");
+
   return (
     <div className="absolute inset-0 z-0">
       <AnimatePresence initial={false} mode="popLayout">
@@ -68,13 +71,24 @@ export function HeroVisual({ src, alt, interval = 5000, randomize = false }: { s
           transition={{ duration: 2, ease: [0.23, 1, 0.32, 1] }}
           className="absolute inset-0"
         >
-          <Image
-            src={slides[index]}
-            alt={alt}
-            fill
-            priority={priority}
-            className="object-cover"
-          />
+          {isVideo ? (
+            <video
+              src={currentSrc}
+              autoPlay
+              muted
+              loop
+              playsInline
+              className="w-full h-full object-cover"
+            />
+          ) : (
+            <Image
+              src={currentSrc}
+              alt={alt}
+              fill
+              priority={priority}
+              className="object-cover"
+            />
+          )}
         </motion.div>
       </AnimatePresence>
       <div className="absolute inset-0 bg-black/50" />
@@ -92,7 +106,7 @@ export function HeroContent({ children, className }: { children: React.ReactNode
 
 export function HeroActions({ children, className }: { children: React.ReactNode; className?: string }) {
   return (
-    <div className={cn("flex flex-col sm:sm-row gap-4 mt-8", className)}>
+    <div className={cn("flex flex-col md:flex-row gap-4 mt-8", className)}>
       {children}
     </div>
   );

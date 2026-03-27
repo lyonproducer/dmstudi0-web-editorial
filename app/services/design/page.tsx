@@ -2,6 +2,7 @@ import Link from "next/link";
 import { photos } from "../../shared/constants";
 import { DesignGrid } from "./components/DesignGrid";
 import { Reveal } from "@/components/cinematic/Reveal";
+import { Footer } from "@/components/blocks/Footer";
 
 export default function DesignPage() {
   const designServices = [
@@ -60,10 +61,7 @@ export default function DesignPage() {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="py-24 px-6 border-t border-primary/5 text-center text-[10px] uppercase tracking-[0.3em] text-secondary">
-        <p>© 2026 DMStudio Editorial. <Link href="/services" className="hover:text-cta ml-4">All Services</Link></p>
-      </footer>
+      <Footer />
     </main>
   );
 }

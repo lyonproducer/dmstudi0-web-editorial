@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { BookingForm } from "./components/BookingForm";
 import { Reveal } from "@/components/cinematic/Reveal";
+import { Footer } from "@/components/blocks/Footer";
 import { photos } from "@/app/shared/constants";
 
 export default function BookingPage() {
@@ -60,10 +61,7 @@ export default function BookingPage() {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="py-24 px-6 border-t border-primary/5 text-center text-[10px] uppercase tracking-[0.3em] text-secondary">
-        <p>© 2026 DMStudio Editorial. <Link href="/" className="hover:text-cta ml-4">Back to Start</Link></p>
-      </footer>
+      <Footer />
     </main>
   );
 }

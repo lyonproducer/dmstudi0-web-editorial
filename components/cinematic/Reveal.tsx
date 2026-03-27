@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 
@@ -23,6 +23,7 @@ export const Reveal = ({
 }: RevealProps) => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
+  const [hasAnimated, setHasAnimated] = useState(false);
 
   const directions = {
     up: { hidden: { opacity: 0, y: 30 }, visible: { opacity: 1, y: 0 } },
@@ -32,7 +33,7 @@ export const Reveal = ({
   };
 
   return (
-    <div ref={ref} style={{ position: "relative", width, height, overflow: "hidden", display: "block" }}>
+    <div ref={ref} style={{ position: "relative", width, height, overflow: hasAnimated ? "visible" : "hidden", display: "block" }}>
       <motion.div
         variants={directions[direction]}
         initial="hidden"
@@ -43,6 +44,7 @@ export const Reveal = ({
           delay, 
           ease: [0.23, 1, 0.32, 1] 
         }}
+        onAnimationComplete={() => setHasAnimated(true)}
       >
         {children}
       </motion.div>

@@ -4,7 +4,6 @@ import { Exhibition } from "./(home)/components/Exhibition";
 import { Capabilities } from "./(home)/components/Capabilities";
 import { Footer } from "@/components/blocks/Footer";
 import { Reveal } from "@/components/cinematic/Reveal";
-import { photos } from "@/app/shared/constants";
 import Link from "next/link";
 
 export default function Home() {
@@ -13,13 +12,12 @@ export default function Home() {
       {/* 1. Cinematic Hero Section */}
       <HeroRoot priority>
         <HeroVisual
-          src={[photos[0], photos[11], photos[18], photos[33]]}
-          alt="Luxury Editorial Photography Studio"
-          randomize={true}
+          src="/videos/IMG_1324-compressed.mp4"
+          alt="DMStudio Editorial Cinematic Reel"
         />
         <HeroContent>
           <Reveal direction="down" width="100%">
-            <span className="subheadline hover:text-white! tracking-normal transition-all duration-500 mb-6 block">Luxury Portrait & Video Production</span>
+            <span className="subheadline hover:text-white! text-grey-500 tracking-normal transition-all duration-500 mb-6 block">Luxury Portrait & Video Production</span>
           </Reveal>
           <Reveal direction="left" delay={0.2} width="100%">
             <h1 className="h1-editorial text-white! max-w-6xl">

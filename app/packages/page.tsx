@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { PackageCard } from "./components/PackageCard";
 import { Reveal } from "@/components/cinematic/Reveal";
+import { Footer } from "@/components/blocks/Footer";
 
 export default function PackagesPage() {
   return (
@@ -44,10 +45,7 @@ export default function PackagesPage() {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="py-24 px-6 border-t border-primary/5 text-center text-[10px] uppercase tracking-[0.3em] text-secondary">
-        <p>© 2026 DMStudio Editorial. <Link href="/" className="hover:text-cta ml-4">Back to Studio</Link></p>
-      </footer>
+      <Footer />
     </main>
   );
 }

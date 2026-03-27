@@ -2,6 +2,7 @@ import Link from "next/link";
 import { photos } from "../../shared/constants";
 import { EditingSuite } from "./components/EditingSuite";
 import { Reveal } from "@/components/cinematic/Reveal";
+import { Footer } from "@/components/blocks/Footer";
 
 export default function PostProductionPage() {
   const editingPhotos = photos.slice(45, 49);
@@ -48,10 +49,7 @@ export default function PostProductionPage() {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="py-24 px-6 border-t border-primary/5 text-center text-[10px] uppercase tracking-[0.3em] text-secondary">
-        <p>© 2026 DMStudio Editorial. <Link href="/services" className="hover:text-cta ml-4">View All Services</Link></p>
-      </footer>
+      <Footer />
     </main>
   );
 }
