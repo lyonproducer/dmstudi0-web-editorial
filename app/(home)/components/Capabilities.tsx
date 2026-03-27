@@ -52,7 +52,7 @@ export function Capabilities() {
         </div>
       </section>
 
-      <section className="relative w-full z-10 bg-[#050505] overflow-x-hidden" id="capabilities">
+      <section className="relative w-full z-10 bg-[#050505]" id="capabilities">
         {/* Intro Header before the carousel starts */}
         <div className="pt-32 pb-16 px-6 md:px-12 max-w-7xl mx-auto flex flex-col items-center justify-center text-center">
           <div className="max-w-3xl flex flex-col items-center">
