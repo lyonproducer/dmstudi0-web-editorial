@@ -47,8 +47,8 @@ export default function Home() {
       {/* 2. Immersive Scroll Gallery */}
       <ImmersiveScrollGallery
         images={[
-          photosBabySofia[0], photosRyan[0], photosBodaElSalvador[0], photosJaycito[0],
-          photosNYFashionWeek[0], photosAtlantaAutos[0], photosCorporateHeadshots[0],
+          photosBodaElSalvador[9], photosBabySofia[5], photosJaycito[0], photosAtlantaAutos[5],
+          photosNYFashionWeek[4], photosAtlantaAutos[0], photosCorporateHeadshots[0],
         ].map((src) => ({ src, scale: null }))}
         headline="Every frame tells a story that commands attention."
       />

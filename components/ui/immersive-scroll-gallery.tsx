@@ -43,9 +43,9 @@ const ImmersiveScrollGallery: React.FC<ImmersiveScrollGalleryProps> = ({
   const scale6 = useTransform(scrollYProgress, [0, 1], [1, 6]);
   const scale8 = useTransform(scrollYProgress, [0, 1], [1, 8]);
   const scale9 = useTransform(scrollYProgress, [0, 1], [1, 9]);
-  const opacityImage   = useTransform(scrollYProgress, [0, 0.7], [1, 0]);
+  const opacityImage = useTransform(scrollYProgress, [0, 0.7], [1, 0]);
   const opacitySection = useTransform(scrollYProgress, [0.6, 0.85], [0, 1]);
-  const scaleSection   = useTransform(scrollYProgress, [0.6, 0.85], [0.85, 1]);
+  const scaleSection = useTransform(scrollYProgress, [0.6, 0.85], [0.85, 1]);
 
   const scales = [scale4, scale5, scale6, scale5, scale6, scale8, scale9];
 
