@@ -92,3 +92,163 @@ export const photos = [
   "https://images.squarespace-cdn.com/content/v1/5a03de77268b96da8b5f47dc/1642448282531-Z7M555XCX8UTAVWCM6Y2/DSC07732-Edit.jpg?format=750w",
   "https://images.squarespace-cdn.com/content/v1/5a03de77268b96da8b5f47dc/1708576669398-MAZG72C8F6DFYXUBGGV6/DSC05348.jpg?format=750w"
 ]
+
+export const photosRyan = [
+  '/assets/images/photosRyan/1.jpg',
+  '/assets/images/photosRyan/2.jpg',
+  '/assets/images/photosRyan/3.jpg',
+  '/assets/images/photosRyan/4.jpg',
+  '/assets/images/photosRyan/5.jpg',
+  '/assets/images/photosRyan/6.jpg',
+  '/assets/images/photosRyan/7.jpg',
+  '/assets/images/photosRyan/8.jpg',
+  '/assets/images/photosRyan/9.jpg',
+  '/assets/images/photosRyan/10.jpg',
+]
+
+export const photosBodaElSalvador = [
+  '/assets/images/photosBodaElSalvador/1.jpg',
+  '/assets/images/photosBodaElSalvador/2.jpg',
+  '/assets/images/photosBodaElSalvador/3.jpg',
+  '/assets/images/photosBodaElSalvador/4.jpg',
+  '/assets/images/photosBodaElSalvador/5.jpg',
+  '/assets/images/photosBodaElSalvador/6.jpg',
+  '/assets/images/photosBodaElSalvador/7.jpg',
+  '/assets/images/photosBodaElSalvador/8.jpg',
+  '/assets/images/photosBodaElSalvador/9.jpg',
+  '/assets/images/photosBodaElSalvador/10.jpg',
+]
+
+
+export const photosBabySofia = [
+  '/assets/images/photosBabySofia/1.jpg',
+  '/assets/images/photosBabySofia/2.jpg',
+  '/assets/images/photosBabySofia/3.jpg',
+  '/assets/images/photosBabySofia/4.jpg',
+  '/assets/images/photosBabySofia/5.jpg',
+  '/assets/images/photosBabySofia/6.jpg',
+  '/assets/images/photosBabySofia/7.jpg',
+  '/assets/images/photosBabySofia/8.jpg',
+  '/assets/images/photosBabySofia/9.jpg',
+  '/assets/images/photosBabySofia/10.jpg',
+
+]
+
+export const photosBabyEzra = [
+  '/assets/images/photosBabyEzra/1.jpg',
+  '/assets/images/photosBabyEzra/2.jpg',
+  '/assets/images/photosBabyEzra/3.jpg',
+  '/assets/images/photosBabyEzra/4.jpg',
+  '/assets/images/photosBabyEzra/5.jpg',
+  '/assets/images/photosBabyEzra/6.jpg',
+  '/assets/images/photosBabyEzra/7.jpg',
+  '/assets/images/photosBabyEzra/8.jpg',
+  '/assets/images/photosBabyEzra/9.jpg',
+  '/assets/images/photosBabyEzra/10.jpg',
+  '/assets/images/photosBabyEzra/11.jpg',
+  '/assets/images/photosBabyEzra/12.jpg',
+
+]
+
+
+export const photosAtlantaAutos = [
+  '/assets/images/photosAtlantaAutos/1.jpg',
+  '/assets/images/photosAtlantaAutos/2.jpg',
+  '/assets/images/photosAtlantaAutos/3.jpg',
+  '/assets/images/photosAtlantaAutos/4.jpg',
+  '/assets/images/photosAtlantaAutos/5.jpg',
+  '/assets/images/photosAtlantaAutos/6.jpg',
+  '/assets/images/photosAtlantaAutos/7.jpg',
+  '/assets/images/photosAtlantaAutos/8.jpg',
+  '/assets/images/photosAtlantaAutos/9.jpg',
+  '/assets/images/photosAtlantaAutos/10.jpg',
+  '/assets/images/photosAtlantaAutos/11.jpg',
+]
+
+export const photosJaycito = [
+  '/assets/images/photosJaycito/1.jpg',
+  '/assets/images/photosJaycito/2.jpg',
+  '/assets/images/photosJaycito/3.jpg',
+  '/assets/images/photosJaycito/4.jpg',
+  '/assets/images/photosJaycito/5.jpg',
+  '/assets/images/photosJaycito/6.jpg',
+  '/assets/images/photosJaycito/7.jpg',
+  '/assets/images/photosJaycito/8.jpg',
+  '/assets/images/photosJaycito/9.jpg',
+  '/assets/images/photosJaycito/10.jpg',
+
+]
+
+export const photosLisaForGlamour = [
+  '/assets/images/photosLisaForGlamour/1.jpg',
+  '/assets/images/photosLisaForGlamour/2.jpg',
+  '/assets/images/photosLisaForGlamour/3.jpg',
+  '/assets/images/photosLisaForGlamour/4.jpg',
+  '/assets/images/photosLisaForGlamour/5.jpg',
+  '/assets/images/photosLisaForGlamour/6.jpg',
+  '/assets/images/photosLisaForGlamour/7.jpg',
+  '/assets/images/photosLisaForGlamour/8.jpg',
+  '/assets/images/photosLisaForGlamour/9.jpg',
+  '/assets/images/photosLisaForGlamour/10.jpg',
+  '/assets/images/photosLisaForGlamour/11.jpg',
+  '/assets/images/photosLisaForGlamour/12.jpg',
+  '/assets/images/photosLisaForGlamour/13.jpg',
+
+]
+
+export const photosBodaAnayLucas = [
+  '/assets/images/photosBodaAnayLucas/1.jpg',
+  '/assets/images/photosBodaAnayLucas/2.jpg',
+  '/assets/images/photosBodaAnayLucas/3.jpg',
+  '/assets/images/photosBodaAnayLucas/4.jpg',
+  '/assets/images/photosBodaAnayLucas/5.jpg',
+  '/assets/images/photosBodaAnayLucas/6.jpg',
+  '/assets/images/photosBodaAnayLucas/7.jpg',
+  '/assets/images/photosBodaAnayLucas/8.jpg',
+  '/assets/images/photosBodaAnayLucas/9.jpg',
+  '/assets/images/photosBodaAnayLucas/10.jpg',
+  '/assets/images/photosBodaAnayLucas/11.jpg',
+  '/assets/images/photosBodaAnayLucas/12.jpg',
+  '/assets/images/photosBodaAnayLucas/13.jpg',
+  '/assets/images/photosBodaAnayLucas/14.jpg',
+  '/assets/images/photosBodaAnayLucas/15.jpg',
+  '/assets/images/photosBodaAnayLucas/16.jpg',
+
+
+]
+
+export const photosNYFashionWeek = [
+  '/assets/images/photosNYFashionWeek/1.jpg',
+  '/assets/images/photosNYFashionWeek/2.jpg',
+  '/assets/images/photosNYFashionWeek/3.jpg',
+  '/assets/images/photosNYFashionWeek/4.jpg',
+  '/assets/images/photosNYFashionWeek/5.jpg',
+  '/assets/images/photosNYFashionWeek/6.jpg',
+  '/assets/images/photosNYFashionWeek/7.jpg',
+  '/assets/images/photosNYFashionWeek/8.jpg',
+  '/assets/images/photosNYFashionWeek/9.jpg',
+  '/assets/images/photosNYFashionWeek/10.jpg',
+  '/assets/images/photosNYFashionWeek/11.jpg',
+  '/assets/images/photosNYFashionWeek/12.jpg',
+  '/assets/images/photosNYFashionWeek/13.jpg',
+
+]
+
+export const photosCorporateHeadshots = [
+  '/assets/images/corporate-headshots/DSC00026.webp',
+  '/assets/images/corporate-headshots/DSC00038.webp',
+  '/assets/images/corporate-headshots/DSC09953.webp',
+  '/assets/images/corporate-headshots/PHOTO-2026-03-26-23-06-21.jpg',
+  '/assets/images/corporate-headshots/PHOTO-2026-03-26-23-06-22 2.jpg',
+  '/assets/images/corporate-headshots/PHOTO-2026-03-26-23-06-22 3.jpg',
+  '/assets/images/corporate-headshots/PHOTO-2026-03-26-23-06-22.jpg',
+]
+
+export const photosPodcastProduction = [
+  '/images/podcast-production/49DD356F-28B6-427D-B13C-0C68C2114BE2.webp',
+  '/images/podcast-production/755C4A35-FD2A-49E8-99D3-9531D256FC98.webp',
+  '/images/podcast-production/9D853FA3-E46B-47F6-802F-3D1BB939FF1E.webp',
+  '/images/podcast-production/DSC00705.webp',
+  '/images/podcast-production/DSC01156.webp',
+  '/images/podcast-production/DSC01176.webp',
+]

@@ -16,9 +16,10 @@ export function Footer() {
         <div>
           <h4 className="text-xs uppercase tracking-[0.2em] font-bold mb-10 text-primary/40">Studio</h4>
           <ul className="space-y-6 text-sm font-medium">
-            <li><Link href="/services" className="hover:text-cta transition-colors">Services</Link></li>
+            <li><Link href="/services/photography" className="hover:text-cta transition-colors">Photography Services</Link></li>
+            <li><Link href="/services/video" className="hover:text-cta transition-colors">Video Services</Link></li>
+            <li><Link href="/packages" className="hover:text-cta transition-colors">Packages</Link></li>
             <li><Link href="/about" className="hover:text-cta transition-colors">Process</Link></li>
-            <li><Link href="/packages" className="hover:text-cta transition-colors">Monthly Packages</Link></li>
             <li><Link href="/booking" className="hover:text-cta transition-colors">Book Consultation</Link></li>
           </ul>
         </div>

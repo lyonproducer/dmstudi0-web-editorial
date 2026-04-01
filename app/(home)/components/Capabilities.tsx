@@ -16,7 +16,7 @@ const servicesData: SlideData[] = [
     title: "Video Production",
     subtitle: "Cinematic Storytelling & Social Content",
     description: "Dynamic motion that captures the essence of your brand, built for modern distribution without sacrificing cinematic quality.",
-    href: "/services/video",
+    href: "/services/video#commercial",
     accent: "#8BA7B8", // Cinematic blue
     imageUrl: photos[1],
   },
@@ -24,7 +24,7 @@ const servicesData: SlideData[] = [
     title: "Podcasts",
     subtitle: "Creative Direction & Set Build-out",
     description: "High-end auditory and visual environments that elevate conversations and transform ordinary discussions into premium shows.",
-    href: "/services/podcast",
+    href: "/services/video#podcasts",
     accent: "#C4956A", // Warm amber/copper
     imageUrl: photos[10],
   },
@@ -32,7 +32,7 @@ const servicesData: SlideData[] = [
     title: "Production Design",
     subtitle: "High-End Web & Narrative Experiences",
     description: "Immersive digital set designs and styling that provide the perfect foundation for luxury storytelling and brand elevation.",
-    href: "/services/design",
+    href: "/services/photography#editorial",
     accent: "#7A9E7E", // Olive/sage
     imageUrl: photos[8],
   }

@@ -1,22 +1,22 @@
 import Link from "next/link";
-import { photos } from "../../shared/constants";
-import { DesignGrid } from "./components/DesignGrid";
+import { PhotoGallery } from "../photography/components/PhotoGallery";
 import { Reveal } from "@/components/cinematic/Reveal";
 import { Footer } from "@/components/blocks/Footer";
+import { photosAtlantaAutos, photosNYFashionWeek, photos } from "@/app/shared/constants";
 
 export default function DesignPage() {
   const designServices = [
     {
+      id: "web-production",
       title: "Web Production",
       desc: "Creating digital experiences that tell your brand's story. Responsive, aesthetic, and conversion-optimized design.",
-      image: photos[50],
-      points: ["Next.js React", "SEO Ready", "Editorial UX", "Brand Narratives"]
+      items: [photos[50] || photos[0], ...photosAtlantaAutos.slice(0, 5)]
     },
     {
+      id: "graphic-design",
       title: "Graphic Design",
       desc: "Visual identity, full branding, and social media materials that capture your brand's essence with a premium aesthetic.",
-      image: photos[51],
-      points: ["Brand Identity", "Editorial Layout", "Social Systems", "Ad Creative"]
+      items: [photos[51] || photos[1], ...photosNYFashionWeek.slice(0, 5)]
     }
   ];
 
@@ -39,7 +39,7 @@ export default function DesignPage() {
             </Reveal>
           </div>
 
-          <DesignGrid services={designServices} />
+          <PhotoGallery categories={designServices} />
         </div>
       </div>
 

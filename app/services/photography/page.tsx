@@ -1,18 +1,64 @@
 import Link from "next/link";
-import { photos } from "../../shared/constants";
+import {
+  photosBabySofia,
+  photosBabyEzra,
+  photosRyan,
+  photosLisaForGlamour,
+  photosNYFashionWeek,
+  photosBodaElSalvador,
+  photosBodaAnayLucas,
+  photosJaycito,
+  photosAtlantaAutos,
+  photosCorporateHeadshots
+} from "../../shared/constants";
 import { PhotoGallery } from "./components/PhotoGallery";
 import { Reveal } from "@/components/cinematic/Reveal";
 import { Footer } from "@/components/blocks/Footer";
 
 export default function PhotographyPage() {
-  const editorialPhotos = photos.slice(7, 13);
-  const lifestylePhotos = photos.slice(14, 20);
-  const brandingPhotos = photos.slice(21, 27);
-
   const categories = [
-    { title: "Editorial Photography", desc: "Magazine covers, advertising campaigns, concept development, styling, and full art direction.", items: editorialPhotos },
-    { title: "Lifestyle Photography", desc: "Premium personal branding for attorneys, realtors, entrepreneurs, and luxury businesses.", items: lifestylePhotos },
-    { title: "Brand Identity", desc: "Modern headshots, team portraits, and strategic visual content for social and web presence.", items: brandingPhotos }
+    {
+      id: "maternity",
+      title: "Maternity",
+      desc: "Graceful, high-end maternity sessions capturing the beauty and elegance of your journey.",
+      items: [...photosBabySofia, ...photosBabyEzra]
+    },
+    {
+      id: "editorial",
+      title: "Editorial",
+      desc: "Magazine covers, advertising campaigns, concept development, styling, and full art direction.",
+      items: [...photosRyan, ...photosLisaForGlamour]
+    },
+    {
+      id: "wedding",
+      title: "Wedding",
+      desc: "Iconic, cinematically captured moments that turn your wedding day into a timeless narrative.",
+      items: [...photosBodaElSalvador, ...photosBodaAnayLucas]
+    },
+    {
+      id: "events",
+      title: "Events",
+      desc: "Elite coverage for luxury parties, private events, and high-profile gatherings.",
+      items: photosNYFashionWeek
+    },
+    {
+      id: "personal-branding",
+      title: "Personal Branding",
+      desc: "Premium personal branding for attorneys, realtors, entrepreneurs, and luxury businesses.",
+      items: photosJaycito
+    },
+    {
+      id: "commercial",
+      title: "Commercial",
+      desc: "High-end product and commercial photography designed for luxury brand campaigns.",
+      items: photosAtlantaAutos
+    },
+    {
+      id: "corporate-headshots",
+      title: "Corporate Headshots",
+      desc: "Modern headshots, team portraits, and strategic visual content for social and web presence.",
+      items: photosCorporateHeadshots
+    }
   ];
 
   return (

@@ -3,13 +3,14 @@ import { cn } from "@/app/shared/utils";
 import { Marquee } from "@/components/cinematic/Marquee";
 
 const agencies = [
-  "VOGUE",
-  "Harper's BAZAAR",
-  "GQ",
-  "ELLE",
+  "Grazia",
+  "Element",
+  "L'Officiel",
+  "Hollyway",
+  "Glamour",
+  "Celebrity",
+  "Fashion & Lux for Gents FLG",
   "Architectural Digest",
-  "VANITY FAIR",
-  "V MAG",
 ];
 
 export function AuthorityStrip({ className }: { className?: string }) {

@@ -10,9 +10,10 @@ import { Menu, X } from "lucide-react";
 import { AnimatePresence, motion, useScroll, useMotionValueEvent } from "framer-motion";
 
 const desktopLinks = [
-  { name: "Services", href: "/services" },
+  { name: "Photography Services", href: "/services/photography" },
+  { name: "Video Services", href: "/services/video" },
+  { name: "Packages", href: "/packages" },
   { name: "Process", href: "/about" },
-  { name: "Monthly Packages", href: "/packages" },
   { name: "Booking", href: "/booking", primary: true }
 ];
 

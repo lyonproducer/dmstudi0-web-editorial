@@ -1,11 +1,19 @@
 import Link from "next/link";
-import { photos } from "../../shared/constants";
-import { PodcastEnvironment } from "./components/PodcastEnvironment";
+import { PhotoGallery } from "../photography/components/PhotoGallery";
 import { Reveal } from "@/components/cinematic/Reveal";
 import { Footer } from "@/components/blocks/Footer";
+import { photosPodcastProduction } from "@/app/shared/constants";
 
 export default function PodcastPage() {
-  const podcastPhotos = photos.slice(40, 43);
+
+  const categories = [
+    { 
+      id: "podcasts",
+      title: "Podcast Production & Engineering", 
+      desc: "Premium auditory and visual environments that elevate conversations. We provide full set design and multi-cam recording to broadcast premium network-level shows.", 
+      items: photosPodcastProduction
+    }
+  ];
 
   return (
     <main className="min-h-screen bg-background text-primary">
@@ -25,7 +33,7 @@ export default function PodcastPage() {
             </Reveal>
           </div>
 
-          <PodcastEnvironment photos={podcastPhotos} />
+          <PhotoGallery categories={categories} />
         </div>
       </div>
 

@@ -1,16 +1,49 @@
 import Link from "next/link";
-import { photos } from "../../shared/constants";
-import { VideoShowcase } from "./components/VideoShowcase";
+import { VideoShowcase, Category } from "./components/VideoShowcase";
+import { PhotoGallery } from "../photography/components/PhotoGallery";
 import { Reveal } from "@/components/cinematic/Reveal";
 import { Footer } from "@/components/blocks/Footer";
+import { photosPodcastProduction } from "@/app/shared/constants";
 
 export default function VideoPage() {
-  const socialVideoPhotos = photos.slice(30, 33);
-  const commercialVideoPhotos = photos.slice(34, 37);
 
-  const categories = [
-    { title: "Social Media Content", desc: "Instagram Reels, TikTok / Shorts, viral videos, and storytelling with optimized editing.", items: socialVideoPhotos },
-    { title: "Commercial / Web Video", desc: "Corporate videos for websites, professional YouTube presence, and brand promotional videos.", items: commercialVideoPhotos }
+  const categories: Category[] = [
+    {
+      id: "commercial",
+      title: "Commercial Video",
+      desc: "High-end cinematic video production for brands, campaigns, and corporate features. Delivered in pristine wide-screen 16:9 format.",
+      items: [
+        { src: "/videos/horizontal-videos/3B8BBFAA-4B33-465B-B10C-840B8E491482.mp4", type: "horizontal" },
+        { src: "/videos/horizontal-videos/edit version 1 privatto.mp4", type: "horizontal" },
+        { src: "/videos/horizontal-videos/IMG_1055.mp4", type: "horizontal" },
+        { src: "/videos/horizontal-videos/Maternity BTS.mp4", type: "horizontal" },
+        { src: "/videos/horizontal-videos/Vid Emanuel V2.mp4", type: "horizontal" }
+      ],
+      layout: "horizontal"
+    },
+    {
+      id: "social-media",
+      title: "Social Media Vertical",
+      desc: "Short-form conversational vertical clips designed for organic reach on Instagram Reels, TikTok, and YouTube Shorts.",
+      items: [
+        { src: "/videos/vertical-videos/2FE88840-3851-4767-8F71-BC1EF69A2571.mp4", type: "vertical" },
+        { src: "/videos/vertical-videos/3F236DB2-5DF4-453C-B75F-3B97AE55E860.mp4", type: "vertical" },
+        { src: "/videos/vertical-videos/73DF1D57-9811-4E77-B984-482DD9E73CA4.mp4", type: "vertical" },
+        { src: "/videos/vertical-videos/953AC413-D97E-4101-BA73-4ECF98081135.mp4", type: "vertical" },
+        { src: "/videos/vertical-videos/D9590BDB-E71E-4549-9579-4A0D55F27332.mp4", type: "vertical" },
+        { src: "/videos/vertical-videos/IMG_0959.mp4", type: "vertical" }
+      ],
+      layout: "vertical"
+    }
+  ];
+
+  const podcastCategory = [
+    {
+      id: "podcasts",
+      title: "Podcast Production & Set Design",
+      desc: "Premium auditory and visual environments that elevate conversations. We provide full set design and multi-cam recording to broadcast premium network-level shows.",
+      items: photosPodcastProduction
+    }
   ];
 
   return (
@@ -23,16 +56,20 @@ export default function VideoPage() {
               <span className="subheadline mb-4 block">Our Visual Agency</span>
             </Reveal>
             <Reveal direction="left" delay={0.1}>
-              <h1 className="h1-editorial max-w-4xl font-serif">High-Impact <br /> Video Production.</h1>
+              <h1 className="h1-editorial max-w-4xl font-serif">High-Impact <br /> Motion Visuals.</h1>
             </Reveal>
             <Reveal direction="up" delay={0.2}>
               <p className="mt-12 text-secondary text-xl max-w-2xl leading-relaxed">
-                Videos that don&apos;t just look good, but tell a story and connect with your audience. Professional recording, expert editing, and optimized delivery for every platform.
+                Videos that don&apos;t just look good, but tell a story and connect with your audience. Professional recording, expert editing, and premium podcasting.
               </p>
             </Reveal>
           </div>
 
           <VideoShowcase categories={categories} />
+
+          <div className="mt-48">
+            <PhotoGallery categories={podcastCategory} startIndex={2} />
+          </div>
         </div>
       </div>
 

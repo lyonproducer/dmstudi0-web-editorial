@@ -7,7 +7,7 @@ import { CallToActionSection } from "@/components/blocks/CTA";
 import { Footer } from "@/components/blocks/Footer";
 import { Reveal } from "@/components/cinematic/Reveal";
 import ImmersiveScrollGallery from "@/components/ui/immersive-scroll-gallery";
-import { photos } from "@/app/shared/constants";
+import { photosBabySofia, photosRyan, photosBodaElSalvador, photosJaycito, photosNYFashionWeek, photosAtlantaAutos, photosCorporateHeadshots } from "@/app/shared/constants";
 import Link from "next/link";
 
 export default function Home() {
@@ -32,7 +32,7 @@ export default function Home() {
             <Link href="/booking" className="inline-block bg-white text-primary px-12 py-6 uppercase font-bold tracking-[0.3em] text-[10px] transition-all duration-500 border border-white hover:bg-transparent hover:text-white hover:border-cta shadow-luxury-lg hover:shadow-cta/20 hover:-translate-y-1">
               Book a Consultation
             </Link>
-            <Link href="/services" className="inline-block bg-transparent text-white border border-white/30 px-12 py-6 uppercase font-bold tracking-[0.3em] text-[10px] transition-all duration-500 hover:border-cta hover:text-cta hover:-translate-y-1">
+            <Link href="/services/photography" className="inline-block bg-transparent text-white border border-white/30 px-12 py-6 uppercase font-bold tracking-[0.3em] text-[10px] transition-all duration-500 hover:border-cta hover:text-cta hover:-translate-y-1">
               Explore Services
             </Link>
           </HeroActions>
@@ -47,8 +47,8 @@ export default function Home() {
       {/* 2. Immersive Scroll Gallery */}
       <ImmersiveScrollGallery
         images={[
-          photos[4], photos[2], photos[3], photos[1],
-          photos[5], photos[6], photos[7],
+          photosBabySofia[0], photosRyan[0], photosBodaElSalvador[0], photosJaycito[0],
+          photosNYFashionWeek[0], photosAtlantaAutos[0], photosCorporateHeadshots[0],
         ].map((src) => ({ src, scale: null }))}
         headline="Every frame tells a story that commands attention."
       />

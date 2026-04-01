@@ -1,11 +1,23 @@
 import Link from "next/link";
-import { photos } from "../../shared/constants";
-import { EditingSuite } from "./components/EditingSuite";
+import { VideoShowcase, Category } from "../video/components/VideoShowcase";
 import { Reveal } from "@/components/cinematic/Reveal";
 import { Footer } from "@/components/blocks/Footer";
+import { photos } from "@/app/shared/constants";
 
 export default function PostProductionPage() {
-  const editingPhotos = photos.slice(45, 49);
+
+  const categories: Category[] = [
+    { 
+      id: "post-production",
+      title: "Editing & Post-Production", 
+      desc: "Transforming raw footage into a masterpiece. Editing, Color Grading, and Sound Design to industry-leading editorial standards.", 
+      items: [
+        { src: "/videos/3B8BBFAA-4B33-465B-B10C-840B8E491482.mp4", type: "vertical", label: "Color Grading Ex." },
+        { src: "/videos/73DF1D57-9811-4E77-B984-482DD9E73CA4.mp4", type: "horizontal", label: "Cinematic Editing" },
+        { src: photos[45] || photos[0], type: "image", label: "Studio Suite" }
+      ] 
+    }
+  ];
 
   return (
     <main className="min-h-screen bg-background text-primary">
@@ -25,7 +37,7 @@ export default function PostProductionPage() {
             </Reveal>
           </div>
 
-          <EditingSuite photos={editingPhotos} />
+          <VideoShowcase categories={categories} />
         </div>
       </div>
 
