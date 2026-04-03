@@ -113,6 +113,7 @@ export function Navbar() {
                 src="/logos/dm.webp"
                 alt="Logo"
                 width={130}
+                height={35}
                 style={{ width: "auto", height: "auto" }}
                 className="object-contain"
               />
