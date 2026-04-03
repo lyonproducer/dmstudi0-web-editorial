@@ -160,7 +160,7 @@ export function PhotoGallery({ categories, startIndex = 0 }: { categories: Categ
                 alt={`${lightbox.title} enlarged`}
                 fill
                 className="object-contain"
-                quality={100}
+                
                 priority
              />
           </div>

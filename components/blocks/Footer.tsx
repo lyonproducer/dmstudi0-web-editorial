@@ -8,7 +8,7 @@ export function Footer() {
     <footer className="py-32 px-6 border-t border-primary/5 bg-background">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-24">
         <div className="md:col-span-2">
-          <Image src="/logos/dm.webp" alt="DMStudio Logo" width={180} height={50} style={{ height: "auto" }} className="object-contain mb-8 opacity-80" />
+          <Image src="/logos/dm.webp" alt="DMStudio Logo" width={180} height={50} style={{ width: "auto", height: "auto" }} className="object-contain mb-8 opacity-80" />
           <p className="text-secondary text-lg leading-relaxed max-w-sm">
             Atlanta&apos;s premier luxury production house. Specialized in celebrity portraiture, editorial campaigns, and technical podcast environments.
           </p>

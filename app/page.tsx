@@ -25,7 +25,7 @@ export default function Home() {
           </Reveal>
           <Reveal direction="left" delay={0.2} width="100%">
             <h1 className="h1-editorial text-white! max-w-6xl">
-              Capturing the Essence of &apos;Premium&apos; Thinking.
+              Images with purpose.
             </h1>
           </Reveal>
           <HeroActions>

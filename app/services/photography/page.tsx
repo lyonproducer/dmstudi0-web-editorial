@@ -1,69 +1,13 @@
 import Link from "next/link";
-import {
-  photosBabySofia,
-  photosBabyEzra,
-  photosRyan,
-  photosLisaForGlamour,
-  photosNYFashionWeek,
-  photosBodaElSalvador,
-  photosBodaAnayLucas,
-  photosJaycito,
-  photosAtlantaAutos,
-  photosCorporateHeadshots
-} from "../../shared/constants";
-import { PhotoGallery } from "./components/PhotoGallery";
+import Image from "next/image";
+import { photographyCategories } from "../../shared/categories";
 import { Reveal } from "@/components/cinematic/Reveal";
 import { Footer } from "@/components/blocks/Footer";
 
 export default function PhotographyPage() {
-  const categories = [
-    {
-      id: "maternity",
-      title: "Maternity",
-      desc: "Graceful, high-end maternity sessions capturing the beauty and elegance of your journey.",
-      items: [...photosBabySofia, ...photosBabyEzra]
-    },
-    {
-      id: "editorial",
-      title: "Editorial",
-      desc: "Magazine covers, advertising campaigns, concept development, styling, and full art direction.",
-      items: [...photosRyan, ...photosLisaForGlamour]
-    },
-    {
-      id: "wedding",
-      title: "Wedding",
-      desc: "Iconic, cinematically captured moments that turn your wedding day into a timeless narrative.",
-      items: [...photosBodaElSalvador, ...photosBodaAnayLucas]
-    },
-    {
-      id: "events",
-      title: "Events",
-      desc: "Elite coverage for luxury parties, private events, and high-profile gatherings.",
-      items: photosNYFashionWeek
-    },
-    {
-      id: "personal-branding",
-      title: "Personal Branding",
-      desc: "Premium personal branding for attorneys, realtors, entrepreneurs, and luxury businesses.",
-      items: photosJaycito
-    },
-    {
-      id: "commercial",
-      title: "Commercial",
-      desc: "High-end product and commercial photography designed for luxury brand campaigns.",
-      items: photosAtlantaAutos
-    },
-    {
-      id: "corporate-headshots",
-      title: "Corporate Headshots",
-      desc: "Modern headshots, team portraits, and strategic visual content for social and web presence.",
-      items: photosCorporateHeadshots
-    }
-  ];
-
   return (
     <main className="min-h-screen bg-background text-foreground">
-      <div className="pt-48 pb-24 px-6 md:px-12">
+      <div className="pt-48 pb-24 px-6 md:px-12 block">
         <div className="max-w-7xl mx-auto">
           {/* Headline Section */}
           <div className="mb-32">
@@ -79,9 +23,39 @@ export default function PhotographyPage() {
               </p>
             </Reveal>
           </div>
-
-          <PhotoGallery categories={categories} />
         </div>
+      </div>
+
+      {/* Category Hero Sections */}
+      <div className="flex flex-col w-full">
+        {photographyCategories.map((category) => (
+          <Link
+            key={category.id}
+            href={`/services/photography/${category.id}`}
+            className="group relative w-full h-[70vh] md:h-[80vh] overflow-hidden block"
+          >
+            <Image
+              src={category.items[0]}
+              alt={category.title}
+              fill
+              className="object-cover transition-transform duration-1000 group-hover:scale-105"
+            />
+            {/* Gradient Overlay for Text Readability */}
+            <div className="absolute inset-0 bg-black/40 transition-opacity duration-500 group-hover:bg-black/50" />
+            
+            {/* Centered Content */}
+            <div className="absolute inset-0 flex flex-col items-center justify-center p-6 text-center z-10">
+              <Reveal direction="down">
+                <h2 className="text-5xl md:text-7xl lg:text-8xl font-serif text-white tracking-widest uppercase mb-8 drop-shadow-xl">{category.title}</h2>
+              </Reveal>
+              <Reveal direction="up" delay={0.1}>
+                <div className="inline-block border border-white/70 text-white px-8 py-4 uppercase font-bold tracking-[0.2em] text-[10px] backdrop-blur-sm transition-all group-hover:bg-white group-hover:text-black">
+                  View Gallery
+                </div>
+              </Reveal>
+            </div>
+          </Link>
+        ))}
       </div>
 
       {/* CTA Section */}

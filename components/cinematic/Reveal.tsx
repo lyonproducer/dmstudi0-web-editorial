@@ -6,8 +6,8 @@ import { useRef } from "react";
 
 interface RevealProps {
   children: React.ReactNode;
-  width?: "fit-content" | "100%";
-  height?: "fit-content" | "100%";
+  width?: "fit-content" | "100%" | "auto" | string;
+  height?: "fit-content" | "100%" | "auto" | string;
   delay?: number;
   direction?: "up" | "down" | "left" | "right";
   duration?: number;
@@ -16,8 +16,8 @@ interface RevealProps {
 
 export const Reveal = ({ 
   children, 
-  width = "100%", 
-  height = "fit-content",
+  width = "auto", 
+  height = "auto",
   delay = 0,
   direction = "up",
   duration = 0.8,

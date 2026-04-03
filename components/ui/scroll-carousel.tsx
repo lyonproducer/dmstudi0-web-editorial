@@ -37,7 +37,7 @@ export function ScrollCarousel({ slides }: { slides: SlideData[] }) {
   return (
     <div
       ref={containerRef}
-      style={{ height: `${slides.length * 100}vh` }}
+      style={{ height: `${slides.length * 100}vh`, position: "relative" }}
       className="relative w-full bg-[#050505]"
     >
       <div className="sticky top-0 h-screen w-full flex items-center justify-center overflow-hidden">

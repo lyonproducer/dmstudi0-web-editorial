@@ -55,8 +55,8 @@ const ImmersiveScrollGallery: React.FC<ImmersiveScrollGalleryProps> = ({
   }));
 
   return (
-    <div ref={container} className={`relative h-[200vh] ${className}`}>
-      <div className="sticky top-0 h-screen overflow-hidden bg-background">
+    <div ref={container} style={{ position: "relative" }} className={`relative h-[200vh] ${className}`}>
+      <div className="sticky top-0 h-screen overflow-hidden bg-black">
 
         {/* Zooming Images */}
         {pictures.map(({ src, scale }, index) => (

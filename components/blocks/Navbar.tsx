@@ -52,7 +52,7 @@ export function Navbar() {
         className="fixed top-0 w-full z-40 bg-background/50 backdrop-blur-xl border-b border-primary/5 px-6 md:px-12 py-6 flex justify-between items-center transition-colors duration-500"
       >
         <Link href="/" className="hover:opacity-80 transition-opacity">
-          <Image src="/logos/dm.webp" alt="DMStudio Logo" width={150} height={40} className="object-contain" priority />
+          <Image src="/logos/dm.webp" alt="DMStudio Logo" width={150} height={40} style={{ width: "auto", height: "auto" }} className="object-contain" priority />
         </Link>
 
         {/* Desktop Links */}
@@ -113,7 +113,7 @@ export function Navbar() {
                 src="/logos/dm.webp"
                 alt="Logo"
                 width={130}
-                height={35}
+                style={{ width: "auto", height: "auto" }}
                 className="object-contain"
               />
               <button
